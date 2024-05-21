@@ -69,7 +69,7 @@ public class BaseTest extends BrowserFactory {
         iTestContext.setAttribute("test-name", method.getName());
     }
 
-    @AfterMethod(alwaysRun = true)
+    /*@AfterMethod(alwaysRun = true)
     public void teardown(ITestContext iTestContext, Method method) {
         WebDriver driver = BrowserFactory.getDriver();
         if (driver != null) {
@@ -77,7 +77,7 @@ public class BaseTest extends BrowserFactory {
         }
         ExtentTestManager.endTest();
         logger.info("test ended: " + method.getName());
-    }
+    }*/
 
     private void createDirectories() {
         FilesHelper.createDirectory(ApplicationConstants.REPORTS_FILE_PATH);

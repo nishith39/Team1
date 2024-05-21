@@ -3,6 +3,7 @@ package com.cogmento.pages;
 import com.cogmento.constants.ApplicationConstants;
 import com.cogmento.utils.CustomException;
 import com.cogmento.utils.WebUtil;
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -138,12 +139,18 @@ public class BasePage {
     }
 
     //deleteRecord("qualizeal","Cancel" or "Delete")
-    public void deleteRecord(String sValue, String popUpOperation) throws Exception {
+    public void deleteRecord(String sValue, String popUpOperation, boolean check) throws Exception {
         performTableOperation(sValue, "delete");
         checkPopupIsDisplayed("Confirm Deletion");
         performActionsOnPopUp(popUpOperation);
         pageRefresh();
-        checkRecordNotDisplayed(sValue);
+        if(check) {
+            checkRecordNotDisplayed(sValue);
+        } else if (check) {
+            checkRecordDisplayed(sValue);
+        } else {
+            System.out.print("Please Check The Option");
+        }
     }
 
     /*Page Navigation Method*/
