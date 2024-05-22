@@ -139,17 +139,15 @@ public class BasePage {
     }
 
     //deleteRecord("qualizeal","Cancel" or "Delete")
-    public void deleteRecord(String sValue, String popUpOperation, boolean check) throws Exception {
+    public void deleteRecord(String sValue, String popUpOperation,boolean look) throws Exception {
         performTableOperation(sValue, "delete");
         checkPopupIsDisplayed("Confirm Deletion");
         performActionsOnPopUp(popUpOperation);
         pageRefresh();
-        if(check) {
+        if(look) {
             checkRecordNotDisplayed(sValue);
-        } else if (check) {
-            checkRecordDisplayed(sValue);
         } else {
-            System.out.print("Please Check The Option");
+            checkRecordDisplayed(sValue);
         }
     }
 

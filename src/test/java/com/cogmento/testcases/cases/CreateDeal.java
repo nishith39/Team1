@@ -4,6 +4,7 @@ import com.cogmento.pages.*;
 import com.cogmento.reporting.ExtentTestManager;
 import com.cogmento.testcases.BaseTest;
 import com.cogmento.utils.CustomException;
+import org.testcontainers.shaded.org.apache.commons.io.filefilter.TrueFileFilter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -47,8 +48,7 @@ public class CreateDeal extends BaseTest {
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
             //casesPage.createCase(testData).verifyCase(testData.get("Title"));
-            dealsPage.createDeal("Google", "Google Deal Done");
-//            dealsPage.deleteRecord("Google","Delete");
+            dealsPage.createDeal("Google", "Google Deal Done",true);
         } catch (Exception e) {
             throw new CustomException(e);
 
@@ -58,7 +58,7 @@ public class CreateDeal extends BaseTest {
     @AfterMethod
     public void tearDown() throws Exception {
         homePage.selectEntity(EntityPanel.Deals);
-        dealsPage.deleteDeal("Google","Cancel",false);
+
         //casesPage.deleteAndPurgeCase(testData.get("Title"));
     }
 }

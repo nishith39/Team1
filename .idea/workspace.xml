@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="" />
+    <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete !!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/DeleteDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/DeleteDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-result.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,21 +29,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sathvikt28"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sathvikt28&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/nishith39/Team1.git",
-    "accountId": "58f1743e-a222-4bf3-825e-1dcb0d1278aa"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nishith39/Team1.git&quot;,
+    &quot;accountId&quot;: &quot;58f1743e-a222-4bf3-825e-1dcb0d1278aa&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2glsrlkj60rMPDJPHr82Zqy8sQI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,6 +53,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.CreateDeal.executor": "Run",
+    "TestNG.DeleteDeal.executor": "Run",
     "git-widget-placeholder": "Team__1__Sathvik",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Sathvik/Documents/GitHub/Team1"
@@ -82,6 +92,20 @@
       <option name="presentableId" value="Default" />
       <updated>1716283699195</updated>
     </task>
+    <task id="LOCAL-00001" summary="Functions are added - Create and Delete !!">
+      <option name="closed" value="true" />
+      <created>1716296534737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716296534737</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Framework setup" />
+    <MESSAGE value="Functions are added - Create and Delete !!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functions are added - Create and Delete !!" />
   </component>
 </project>

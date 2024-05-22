@@ -14,14 +14,16 @@ public class DealsPage extends BasePage{
     private final By titleDeal = By.xpath("//label[text()='Title']//following-sibling::div//input");
     private final By descriptionDeal = By.xpath("//label[text()='Description']//following-sibling::textarea");
 
-    public void createDeal(String title, String description) throws Exception {
+    public void createDeal(String title, String description,boolean check) throws Exception {
         clickOnCreate();
         enterDealsDetails(title, description);
         clickOnSave();
-        checkDealsHeader(title);
+        if(check) {
+            checkDealsHeader(title);
+        }
     }
-    public void deleteDeal(String title,String popupValue,boolean check) throws Exception {
-        deleteRecord(title,popupValue,check);
+    public void deleteDeal(String title,String popupValue,boolean look) throws Exception {
+        deleteRecord(title,popupValue,look);
 
     }
 
@@ -44,8 +46,8 @@ public class DealsPage extends BasePage{
         checkPageHeader(title);
     }
 
-    public void clickOnDelete(String title, String popUpValue,boolean check) throws Exception {
-        deleteRecord(title, popUpValue,check);
+    public void clickOnDelete(String title, String popUpValue,boolean look) throws Exception {
+        deleteRecord(title, popUpValue,look);
     }
 
 }
