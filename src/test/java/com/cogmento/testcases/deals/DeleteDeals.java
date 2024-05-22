@@ -1,6 +1,9 @@
 package com.cogmento.testcases.deals;
 
-import com.cogmento.pages.*;
+import com.cogmento.pages.DealsPage;
+import com.cogmento.pages.EntityPanel;
+import com.cogmento.pages.HomePage;
+import com.cogmento.pages.LoginPage;
 import com.cogmento.reporting.ExtentTestManager;
 import com.cogmento.testcases.BaseTest;
 import com.cogmento.utils.CustomException;
@@ -10,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.HashMap;
 
-public class CreateDeals extends BaseTest {
+public class DeleteDeals extends BaseTest {
     private static final String SHEETNAME = "Deals";
     private final String TESTCASENAME = "TC_01";
     //private CasesPage casesPage;
@@ -43,13 +46,10 @@ public class CreateDeals extends BaseTest {
             // Login Page - Login to Application
             loginPage.loginToApp(userEmailId, userPwd);
             ExtentTestManager.getTest().pass("Logged in to application");
-
-            // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
-            //casesPage.createCase(testData).verifyCase(testData.get("Title"));
+            dealsPage.deleteRecord("Siri","Delete");
 
-            dealsPage.createDeals("Siri", "Hi Ramya", "DEAl_123");
-          //  homePage.selectEntity(EntityPanel.Deals);
+
         } catch (Exception e) {
             throw new CustomException(e);
 
@@ -62,3 +62,4 @@ public class CreateDeals extends BaseTest {
         //casesPage.deleteAndPurgeCase(testData.get("Title"));
     }
 }
+

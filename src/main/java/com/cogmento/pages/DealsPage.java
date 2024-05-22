@@ -24,6 +24,7 @@ public class DealsPage extends BasePage {
         /*if(check){
             verifyPageTitle(headerTitle);
         }*/
+        verifyPageTitle(titleName);
 
     }
 
@@ -48,9 +49,9 @@ public class DealsPage extends BasePage {
     public void delete(String title, String operation) throws Exception {
         deleteRecord(title,operation);
     }
-   /* public void verifyPageTitle(String headerTitle) throws Exception {
+    public void verifyPageTitle(String headerTitle) throws Exception {
         checkPageHeader(headerTitle);
-    }*/
+    }
 
 
 
