@@ -143,7 +143,11 @@ public class BasePage {
         checkPopupIsDisplayed("Confirm Deletion");
         performActionsOnPopUp(popUpOperation);
         pageRefresh();
-        checkRecordNotDisplayed(sValue);
+        if(popUpOperation.equals("Delete")) {
+            checkRecordNotDisplayed(sValue);
+        } else {
+            checkRecordDisplayed(sValue);
+        }
     }
 
     /*Page Navigation Method*/
