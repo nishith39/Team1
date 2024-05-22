@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class DeleteDeal extends BaseTest {
     private static final String SHEETNAME = "Deals";
     private final String TESTCASENAME = "TC_02";
-   
+
     private DealsPage dealsPage;
     private LoginPage loginPage;
     private HomePage homePage;
@@ -39,7 +39,7 @@ public class DeleteDeal extends BaseTest {
 
     }
 
-    @Test(description = "Create Deals")
+    @Test(description = "Delete Deals")
     public void testCaseFlow() throws Exception {
         try {
 
