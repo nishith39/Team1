@@ -21,12 +21,25 @@ public class DealsPage extends BasePage{
         checkDealsHeader(title);
     }
 
+    public void editDeal(String description,String probability) throws Exception {
+        clickOnCreate();
+        enterEditDealsDetails(description,probability);
+        clickOnSave();
+    }
+
+
     public void clickOnCreate () throws Exception {
         createButton();
     }
 
     public void enterDealsDetails (String title, String description, String probability){
         scriptAction.inputText(titleDeal, title);
+        scriptAction.inputText(descriptionDeal, description);
+        scriptAction.inputText(probabilityDeal, probability);
+
+    }
+    public void enterEditDealsDetails ( String description, String probability){
+
         scriptAction.inputText(descriptionDeal, description);
         scriptAction.inputText(probabilityDeal, probability);
 
