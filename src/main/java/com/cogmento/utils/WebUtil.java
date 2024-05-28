@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.security.Key;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +60,7 @@ public class WebUtil {
 
     public void clearAndInputText(By locator, String sText) {
         WebElement ele = getWebElement(locator);
-        ele.clear();
+        ele.sendKeys(Keys.CONTROL,"A",Keys.BACK_SPACE);
         ele.sendKeys(sText);
     }
 

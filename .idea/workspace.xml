@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete !!">
+    <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete..&#10;Hashmap using excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/utils/WebUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/utils/WebUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/DeleteDeal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-result.json" afterDir="false" />
     </list>
@@ -52,18 +53,22 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.CreateDeal.executor": "Run",
+    "TestNG.CreateDeal.testCaseCreate.executor": "Run",
+    "TestNG.CreateDeal.testCaseDelete.executor": "Run",
+    "TestNG.CreateDeal.testCaseEdit.executor": "Run",
     "TestNG.CreateDeal.testCaseFlow1.executor": "Run",
     "TestNG.CreateDeal.testCaseFlow2.executor": "Run",
     "TestNG.CreateDeal.testCaseFlow4.executor": "Run",
     "TestNG.CreateDeal.testcaseFlow3.executor": "Run",
+    "TestNG.CreateDeal.testcaseNoMandate.executor": "Run",
     "TestNG.DeleteDeal.executor": "Run",
     "git-widget-placeholder": "Team__1__Sathvik",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Sathvik/Documents/GitHub/Team1"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.CreateDeal.testCaseFlow4">
-    <configuration name="CreateDeal" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CreateDeal.testCaseDelete">
+    <configuration name="CreateDeal.testCaseCreate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
         <pattern>
@@ -73,24 +78,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
       <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreateDeal.testCaseFlow1" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="selenium-ui" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
-      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
-      <option name="METHOD_NAME" value="testCaseFlow1" />
+      <option name="METHOD_NAME" value="testCaseCreate" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -98,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateDeal.testCaseFlow2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateDeal.testCaseDelete" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
         <pattern>
@@ -108,7 +96,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
       <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
-      <option name="METHOD_NAME" value="testCaseFlow2" />
+      <option name="METHOD_NAME" value="testCaseDelete" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -116,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateDeal.testCaseFlow4" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateDeal.testCaseEdit" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +114,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
       <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
-      <option name="METHOD_NAME" value="testCaseFlow4" />
+      <option name="METHOD_NAME" value="testCaseEdit" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -152,13 +140,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CreateDeal.testcaseNoMandate" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testcaseNoMandate" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CreateDeal.testCaseFlow4" />
-        <item itemvalue="TestNG.CreateDeal.testCaseFlow1" />
+        <item itemvalue="TestNG.CreateDeal.testCaseDelete" />
+        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
+        <item itemvalue="TestNG.CreateDeal.testCaseEdit" />
+        <item itemvalue="TestNG.CreateDeal.testcaseNoMandate" />
         <item itemvalue="TestNG.CreateDeal.testcaseFlow3" />
-        <item itemvalue="TestNG.CreateDeal.testCaseFlow2" />
-        <item itemvalue="TestNG.CreateDeal" />
       </list>
     </recent_temporary>
   </component>
@@ -187,12 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716348724199</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716790597589</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716790597589</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Framework setup" />
     <MESSAGE value="Functions are added - Create and Delete !!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Functions are added - Create and Delete !!" />
+    <MESSAGE value="Functions are added - Create and Delete..&#10;Hashmap using excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functions are added - Create and Delete..&#10;Hashmap using excel" />
   </component>
 </project>

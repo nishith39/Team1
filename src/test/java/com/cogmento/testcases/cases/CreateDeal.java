@@ -25,7 +25,8 @@ public class CreateDeal extends BaseTest {
     private HomePage homePage;
     private DealsPage dealsPage;
     private String userEmailId, userPwd;
-    private HashMap<String, String> testData = new HashMap<>();
+    private final HashMap<String, String> testData = new HashMap<>();
+    private HashMap<String,String> newTestData = new HashMap<>();
 
     public HashMap createDealData() throws IOException {
         HashMap<String, String> data = new HashMap<>();
@@ -69,7 +70,7 @@ public class CreateDeal extends BaseTest {
     }
 
     @Test(priority = 1, description = "Create Deals")
-    public void testCaseFlow1() throws Exception {
+    public void testCaseCreate() throws Exception {
         try {
 
             // Login Page - Login to Application
@@ -88,17 +89,16 @@ public class CreateDeal extends BaseTest {
     }
 
     @Test(priority = 2, description = "Edit Deals")
-    public void testCaseFlow2() throws Exception {
+    public void testCaseEdit() throws Exception {
         try {
-
+            newTestData.put("Title","Samsung");
             // Login Page - Login to Application
             loginPage.loginToApplication(userEmailId, userPwd);
             ExtentTestManager.getTest().pass("Logged in to application");
-
+            HashMap<String,String> data = createDealData();
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
-            HashMap<String,String> data = createDealData();
-            dealsPage.editDeal("Samsung",data);
+            dealsPage.clickOnEdit(data,newTestData);
 //            dealsPage.clickOnSave();
 //            dealsPage.editDeal("GoogleDoodle","Apple","Apple Took Over the deal !!");
         } catch (Exception e) {
@@ -107,14 +107,32 @@ public class CreateDeal extends BaseTest {
         }
     }
 
-    @Test(priority = 3, description = "No Mandatory")
-    public void testcaseFlow3() throws Exception {
+    @Test(priority = 3, description = "Max Characters")
+    public void testcaseMaxChar() throws CustomException {
         try {
             loginPage.loginToApplication(userEmailId,userPwd);
             ExtentTestManager.getTest().pass("Logged into Application");
 
             homePage.selectEntity(EntityPanel.Deals);
             HashMap<String,String> data = createDealData();
+            data.put("Title","AAAAArt is a powerful medium that transcends cultural and linguistic barriers, fostering a universal dialogue. Through various forms like painting, sculpture, music, and dance, art expresses the complexities of human emotions and experiences. It challenges perspectives, evokes empathy, and inspires change. By reflecting society's values and struggles, art not only captures history but also shapes the future, making it an indispensable aspect of human civilization.");
+            dealsPage.createDeal(data,false);
+            dealsPage.toastErrorMessage("Title is longer than 350 characters");
+        } catch (Exception e) {
+            throw new CustomException(e);
+
+        }
+    }
+
+    @Test(priority = 4, description = "No Mandatory")
+    public void testcaseNoMandate() throws Exception {
+        try {
+            loginPage.loginToApplication(userEmailId,userPwd);
+            ExtentTestManager.getTest().pass("Logged into Application");
+
+            homePage.selectEntity(EntityPanel.Deals);
+            HashMap<String,String> data = createDealData();
+            data.put("Title","");
             dealsPage.createDeal(data,false);
             dealsPage.verifyErrorMessage("The field Title is required.");
         } catch (Exception e) {
@@ -122,8 +140,8 @@ public class CreateDeal extends BaseTest {
         }
     }
 
-    @Test(priority = 4, description = "Delete Deals")
-    public void testCaseFlow4() throws Exception {
+    @Test(priority = 5, description = "Delete Deals")
+    public void testCaseDelete() throws Exception {
         try {
 
             /* Login Page - Login to Application */
@@ -132,7 +150,8 @@ public class CreateDeal extends BaseTest {
 
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
-            dealsPage.deleteDeal("GoogleDoodle","Delete",true);
+            HashMap<String,String> data = createDealData();
+            dealsPage.deleteDeal(data.get("Title"),"Delete",false);
         } catch (Exception e) {
             throw new CustomException(e);
         }

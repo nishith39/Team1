@@ -33,6 +33,7 @@ public class BasePage {
     private static final By errMessages = By.xpath("//span[@class='inline-error-msg']");//Error Messages at fields
     private static final By lengthErrorMsg = By.xpath("//div[@class='ui error floating icon message']"); //Error Messages for max input
     private static final By withoutUsersXpath = By.xpath("//div[text()='Access']/parent::div/span");
+    private static final By toastErrorMsg = By.xpath("//div[@class='content']//p");
 
     // Dynamcal Elements
     private String rubbishBinOperation = "//button[text()='%s Selected']";
@@ -145,9 +146,9 @@ public class BasePage {
         performActionsOnPopUp(popUpOperation);
         pageRefresh();
         if(look) {
-            checkRecordNotDisplayed(sValue);
-        } else {
             checkRecordDisplayed(sValue);
+        } else {
+            checkRecordNotDisplayed(sValue);
         }
     }
 
@@ -375,6 +376,18 @@ public class BasePage {
         String re = String.format(allDetailsVerification, labelName, sValue);
         System.out.println(re);
         // scriptAction.waitUntilElementIsVisible(By.xpath(re),ApplicationConstants.MEDIUM_TIMEOUT);
+    }
+
+    public void toastErrorMessage(String sExpectedErrorMessage) throws Exception {
+        try {
+            String sActualToastErrorMessage = scriptAction.getText(toastErrorMsg);
+            scriptAction.waitUntilElementIsVisible(toastErrorMsg, ApplicationConstants.MEDIUM_TIMEOUT); //wait until the error message is display
+            Assert.assertTrue(sExpectedErrorMessage.contains(sActualToastErrorMessage), "toast error message is not matched");
+            logger.info("Expected toast Error Message displayed : " + sExpectedErrorMessage);
+        }catch (CustomException e){
+            logger.error("Expected toast Error message is not matched");
+            throw new CustomException(e);
+        }
     }
 
 
