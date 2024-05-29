@@ -59,7 +59,7 @@ public class WebUtil {
 
     public void clearAndInputText(By locator, String sText) {
         WebElement ele = getWebElement(locator);
-        ele.clear();
+        ele.sendKeys(Keys.CONTROL, "A", Keys.BACK_SPACE);
         ele.sendKeys(sText);
     }
 
@@ -312,5 +312,8 @@ public class WebUtil {
             logger.error(e.getMessage());
             return null;
         }
+    }
+
+    public void clearAndType(By titleField, String newTitle) {
     }
 }

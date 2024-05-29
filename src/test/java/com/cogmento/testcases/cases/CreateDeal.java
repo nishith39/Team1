@@ -16,6 +16,13 @@ public class CreateDeal extends BaseTest {
     private DealsPage dealsPage;
     private String userEmailId, userPwd;
     private HashMap<String, String> testData = new HashMap<>();
+
+    public HashMap<String,String> createDeal(){
+        HashMap<String, String> data = new HashMap<>();
+        data.put("Title", "Samsung");
+        data.put("Description", "Galaxy is being launched");
+        return data;
+    }
     @BeforeMethod
     public void setUp() {
         // Get Test data
@@ -27,7 +34,7 @@ public class CreateDeal extends BaseTest {
         loginPage = new LoginPage(getDriver());
         homePage = new HomePage(getDriver());
         dealsPage = new DealsPage(getDriver());
-        //casesPage = new CasesPage(getDriver());
+
     }
     @Test(description = "Create Deals")
     public void testCaseFlow() throws Exception {
@@ -35,10 +42,11 @@ public class CreateDeal extends BaseTest {
             // Login Page - Login to Application
             loginPage.loginToApp(userEmailId, userPwd);
             ExtentTestManager.getTest().pass("Logged in to application");
-            // Step 1 :  Create Company
+            // Step 1 :  Create Deal
             homePage.selectEntity(EntityPanel.Deals);
+            HashMap<String,String> data = createDeal();
             //casesPage.createCase(testData).verifyCase(testData.get("Title"));
-            dealsPage.createDeal("Samsung", "New Galaxy Launched");
+            dealsPage.createDeal(data);
         } catch (Exception e) {
             throw new CustomException(e);
         }

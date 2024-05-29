@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.xml.sax.Locator;
 
+import java.util.HashMap;
+
+import static com.cogmento.utils.CommonUtil.waitUntilTime;
+
 public class DealsPage extends BasePage{
     public DealsPage(WebDriver driver) {
         super(driver);
@@ -12,20 +16,29 @@ public class DealsPage extends BasePage{
     private final By titleDeal = By.xpath("//label[text()='Title']//following-sibling::div//input");
     private final By descriptionDeal = By.xpath("//label[text()='Description']//following-sibling::textarea");
 
-    public void createDeal(String title, String description) throws Exception {
+    public void createDeal(HashMap<String, String> data) throws Exception {
         clickOnCreate();
-        enterDealsDetails(title, description);
+        enterDealsDetails(data);
         clickOnSave();
-        checkDealsHeader(title);
+        checkDealsHeader(data.get("Title"));
+    }
+
+    public void editDeal(String oldTitle, HashMap<String, String> data) throws Exception {
+        performTableOperation(oldTitle, "edit");
+        waitUntilTime(2000);
+        enterDealsDetails(data);
+        clickOnSave();
+//        checkDealsHeader(data.get("Title"));
     }
 
     public void clickOnCreate () throws Exception {
         createButton();
     }
 
-    public void enterDealsDetails (String title, String description){
-        scriptAction.inputText(titleDeal, title);
-        scriptAction.inputText(descriptionDeal, description);
+    public void enterDealsDetails (HashMap<String, String> data){
+
+        scriptAction.clearAndInputText(titleDeal, data.get("Title"));
+        scriptAction.clearAndInputText(descriptionDeal, data.get("Description"));
     }
 
     public void clickOnSave () throws Exception {
@@ -39,5 +52,7 @@ public class DealsPage extends BasePage{
     public void clickOnDelete(String title, String popUpValue) throws Exception {
         deleteRecord(title, popUpValue);
     }
+
+    //public void clickOnDropdown(String )
 
 }

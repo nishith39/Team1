@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class DeleteDeal extends BaseTest {
     private static final String SHEETNAME = "Deals";
-    private final String TESTCASENAME = "TC_01";
+    private final String TESTCASENAME = "TC_02";
     //private CasesPage casesPage;
     private LoginPage loginPage;
     private HomePage homePage;
@@ -36,7 +36,7 @@ public class DeleteDeal extends BaseTest {
         //casesPage = new CasesPage(getDriver());
     }
 
-    @Test(description = "Create Deals")
+    @Test(description = "Delete Deals")
     public void testCaseFlow() throws Exception {
         try {
             // Login Page - Login to Application
@@ -45,7 +45,7 @@ public class DeleteDeal extends BaseTest {
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
             //casesPage.createCase(testData).verifyCase(testData.get("Title"));
-            dealsPage.deleteRecord("Samsung","Cancel");
+            dealsPage.clickOnDelete("Samsung","Delete");
         } catch (Exception e) {
             throw new CustomException(e);
         }
