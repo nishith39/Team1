@@ -157,7 +157,7 @@ public class CreateDeal extends BaseTest {
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
             HashMap<String,String> data = testData;
-            dealsPage.deleteDeal(data.get("Title"),"Delete",false);
+            dealsPage.deleteDeal(data,"Delete");
         } catch (Exception e) {
             throw new CustomException(e);
         }

@@ -7,7 +7,9 @@
     <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete..&#10;Hashmap using excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-result.json" afterDir="false" />
@@ -160,8 +162,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.CreateDeal.testCaseEdit" />
-        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
         <item itemvalue="TestNG.CreateDeal.testCaseDelete" />
+        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
         <item itemvalue="TestNG.CreateDeal.testcaseNoMandate" />
         <item itemvalue="TestNG.CreateDeal.testcaseMaxChar" />
       </list>
@@ -208,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716888804938</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716949355025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716949355025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

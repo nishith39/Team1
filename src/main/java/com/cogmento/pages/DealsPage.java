@@ -28,8 +28,9 @@ public class DealsPage extends BasePage{
         }
     }
 
-    public void deleteDeal(String title,String popupValue,boolean look) throws Exception {
-        deleteRecord(title,popupValue,look);
+    public void deleteDeal(HashMap<String,String> data,String action) throws Exception {
+        waitUntilTime(3000);
+        deleteRecord(data.get("Title"),action);
 
     }
 
