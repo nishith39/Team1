@@ -9,6 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testcontainers.shaded.org.apache.commons.io.filefilter.TrueFileFilter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -25,22 +26,22 @@ public class CreateDeal extends BaseTest {
     private HomePage homePage;
     private DealsPage dealsPage;
     private String userEmailId, userPwd;
-    private final HashMap<String, String> testData = new HashMap<>();
+    private HashMap<String, String> testData = new HashMap<>();
     private HashMap<String,String> newTestData = new HashMap<>();
 
-    public HashMap createDealData() throws IOException {
-        HashMap<String, String> data = new HashMap<>();
-        File filename = new File("C:\\Users\\Sathvik\\Downloads\\deals.xlsx");
-        FileInputStream finput = new FileInputStream(filename);
-        XSSFWorkbook workbook = new XSSFWorkbook(finput);
-        XSSFSheet sheet = workbook.getSheet("DealsSheet");
-        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-            String key = sheet.getRow(i).getCell(0).getStringCellValue();
-            String value = sheet.getRow(i).getCell(1).getStringCellValue();
-            data.put(key,value);
-        }
-        return data;
-    }
+//    public HashMap createDealData() throws IOException {
+//        HashMap<String, String> data = new HashMap<>();
+//        File filename = new File("C:\\Users\\Sathvik\\Downloads\\deals.xlsx");
+//        FileInputStream finput = new FileInputStream(filename);
+//        XSSFWorkbook workbook = new XSSFWorkbook(finput);
+//        XSSFSheet sheet = workbook.getSheet("DealsSheet");
+//        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+//            String key = sheet.getRow(i).getCell(0).getStringCellValue();
+//            String value = sheet.getRow(i).getCell(1).getStringCellValue();
+//            data.put(key,value);
+//        }
+//        return data;
+//    }
 //        data.put("Title","");
 //        data.put("Description","Samsung retook the Deal");
 //        return data;
@@ -53,13 +54,18 @@ public class CreateDeal extends BaseTest {
 //        return data;
 //    }
 
+    @BeforeSuite
+    public void suiteSetup(){
+        testData = xlsFile.getExcelRowValuesIntoMapBasedOnKey(SHEETNAME, TESTCASENAME);
+
+    }
+
     @BeforeMethod
     public void setUp() {
 
         // Get Test data
         userEmailId = configurationDetails.getUserName();
         userPwd = configurationDetails.getPassword();
-//        testData = xlsFile.getExcelRowValuesIntoMapBasedOnKey(SHEETNAME, TESTCASENAME);
 
 
         // Initiate Pages
@@ -79,7 +85,7 @@ public class CreateDeal extends BaseTest {
 
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
-            HashMap<String,String> data = createDealData();
+            HashMap<String,String> data = testData;
             dealsPage.createDeal(data,true);
 //            dealsPage.createDeal("GoogleDoodle", "Google Deal Done",true);
         } catch (Exception e) {
@@ -92,15 +98,15 @@ public class CreateDeal extends BaseTest {
     public void testCaseEdit() throws Exception {
         try {
             newTestData.put("Title","Samsung");
-            // Login Page - Login to Application
+
             loginPage.loginToApplication(userEmailId, userPwd);
             ExtentTestManager.getTest().pass("Logged in to application");
-            HashMap<String,String> data = createDealData();
-            // Step 1 :  Create Company
+            homePage.selectEntity(EntityPanel.Deals);
+            HashMap<String,String> data = testData;
+            dealsPage.createDeal(data,true);
             homePage.selectEntity(EntityPanel.Deals);
             dealsPage.clickOnEdit(data,newTestData);
-//            dealsPage.clickOnSave();
-//            dealsPage.editDeal("GoogleDoodle","Apple","Apple Took Over the deal !!");
+
         } catch (Exception e) {
             throw new CustomException(e);
 
@@ -114,7 +120,7 @@ public class CreateDeal extends BaseTest {
             ExtentTestManager.getTest().pass("Logged into Application");
 
             homePage.selectEntity(EntityPanel.Deals);
-            HashMap<String,String> data = createDealData();
+            HashMap<String,String> data = testData;
             data.put("Title","AAAAArt is a powerful medium that transcends cultural and linguistic barriers, fostering a universal dialogue. Through various forms like painting, sculpture, music, and dance, art expresses the complexities of human emotions and experiences. It challenges perspectives, evokes empathy, and inspires change. By reflecting society's values and struggles, art not only captures history but also shapes the future, making it an indispensable aspect of human civilization.");
             dealsPage.createDeal(data,false);
             dealsPage.toastErrorMessage("Title is longer than 350 characters");
@@ -131,7 +137,7 @@ public class CreateDeal extends BaseTest {
             ExtentTestManager.getTest().pass("Logged into Application");
 
             homePage.selectEntity(EntityPanel.Deals);
-            HashMap<String,String> data = createDealData();
+            HashMap<String,String> data = testData;
             data.put("Title","");
             dealsPage.createDeal(data,false);
             dealsPage.verifyErrorMessage("The field Title is required.");
@@ -150,7 +156,7 @@ public class CreateDeal extends BaseTest {
 
             // Step 1 :  Create Company
             homePage.selectEntity(EntityPanel.Deals);
-            HashMap<String,String> data = createDealData();
+            HashMap<String,String> data = testData;
             dealsPage.deleteDeal(data.get("Title"),"Delete",false);
         } catch (Exception e) {
             throw new CustomException(e);

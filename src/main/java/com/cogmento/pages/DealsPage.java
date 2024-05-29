@@ -37,22 +37,20 @@ public class DealsPage extends BasePage{
         createButton();
     }
     public void enterDealsDetails (HashMap<String,String> data,boolean isEdit){
-        for (String s : data.keySet()){
-            if (s.equalsIgnoreCase("Title")){
+            if (data.containsKey("Title")){
                 if (isEdit){
-                    scriptAction.clearAndInputText(titleDeal,data.get(s));
+                    scriptAction.clearAndInputText(titleDeal,data.get("Title"));
                 } else {
-                    scriptAction.inputText(titleDeal,data.get(s));
+                    scriptAction.inputText(titleDeal,data.get("Title"));
                 }
             }
-            if(s.equalsIgnoreCase("Description")){
+            if(data.containsKey("Description")){
                 if (isEdit){
-                    scriptAction.clearAndInputText(descriptionDeal,data.get(s));
+                    scriptAction.clearAndInputText(descriptionDeal,data.get("Description"));
                 } else {
-                    scriptAction.inputText(descriptionDeal,data.get(s));
+                    scriptAction.inputText(descriptionDeal,data.get("Description"));
                 }
             }
-        }
     }
 
     public void clickOnSave () throws Exception {

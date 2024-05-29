@@ -7,9 +7,7 @@
     <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete..&#10;Hashmap using excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/utils/WebUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/utils/WebUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-result.json" afterDir="false" />
@@ -60,6 +58,7 @@
     "TestNG.CreateDeal.testCaseFlow2.executor": "Run",
     "TestNG.CreateDeal.testCaseFlow4.executor": "Run",
     "TestNG.CreateDeal.testcaseFlow3.executor": "Run",
+    "TestNG.CreateDeal.testcaseMaxChar.executor": "Run",
     "TestNG.CreateDeal.testcaseNoMandate.executor": "Run",
     "TestNG.DeleteDeal.executor": "Run",
     "git-widget-placeholder": "Team__1__Sathvik",
@@ -67,7 +66,7 @@
     "last_opened_file_path": "C:/Users/Sathvik/Documents/GitHub/Team1"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.CreateDeal.testCaseDelete">
+  <component name="RunManager">
     <configuration name="CreateDeal.testCaseCreate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
@@ -122,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateDeal.testcaseFlow3" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateDeal.testcaseMaxChar" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
       <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
-      <option name="METHOD_NAME" value="testcaseFlow3" />
+      <option name="METHOD_NAME" value="testcaseMaxChar" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -160,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CreateDeal.testCaseDelete" />
-        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
         <item itemvalue="TestNG.CreateDeal.testCaseEdit" />
+        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
+        <item itemvalue="TestNG.CreateDeal.testCaseDelete" />
         <item itemvalue="TestNG.CreateDeal.testcaseNoMandate" />
-        <item itemvalue="TestNG.CreateDeal.testcaseFlow3" />
+        <item itemvalue="TestNG.CreateDeal.testcaseMaxChar" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716790597589</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716888804938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716888804938</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
