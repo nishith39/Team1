@@ -1,1 +1,1 @@
-[{"duration":"00:00:20:036","name":"com.cogmento.testcases.deals.DeleteDeals","status":"Pass"}]
+[{"duration":"00:00:13:957","name":"com.cogmento.testcases.cases.CreateDeal","status":"Pass"},{"duration":"00:00:21:569","name":"com.cogmento.testcases.cases.CreateDeal","status":"Pass"},{"duration":"00:00:13:408","name":"com.cogmento.testcases.cases.CreateDeal","status":"Pass"},{"duration":"00:00:12:252","name":"com.cogmento.testcases.cases.CreateDeal","status":"Pass"},{"duration":"00:00:33:075","name":"com.cogmento.testcases.cases.CreateDeal","status":"Fail"}]

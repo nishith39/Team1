@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/Test-Automaton-Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cogmento/pages/DealsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cogmento/testcases/cases/CreateDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test-result.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/test-result.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/test-result.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sathvikt28&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nishith39/Team1.git&quot;,
+    &quot;accountId&quot;: &quot;58f1743e-a222-4bf3-825e-1dcb0d1278aa&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2glsrlkj60rMPDJPHr82Zqy8sQI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.CreateDeal.executor": "Run",
+    "TestNG.CreateDeal.testCaseCreate.executor": "Run",
+    "TestNG.CreateDeal.testCaseDelete.executor": "Run",
+    "TestNG.CreateDeal.testCaseEdit.executor": "Run",
+    "TestNG.CreateDeal.testCaseFlow1.executor": "Run",
+    "TestNG.CreateDeal.testCaseFlow2.executor": "Run",
+    "TestNG.CreateDeal.testCaseFlow4.executor": "Run",
+    "TestNG.CreateDeal.testcaseFlow3.executor": "Run",
+    "TestNG.CreateDeal.testcaseMaxChar.executor": "Run",
+    "TestNG.CreateDeal.testcaseNoMandate.executor": "Run",
+    "TestNG.DeleteDeal.executor": "Run",
+    "git-widget-placeholder": "Team__1__Sathvik",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Sathvik/Documents/GitHub/Team1"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="CreateDeal.testCaseCreate" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testCaseCreate" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateDeal.testCaseDelete" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testCaseDelete" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateDeal.testCaseEdit" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testCaseEdit" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateDeal.testcaseMaxChar" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testcaseMaxChar" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateDeal.testcaseNoMandate" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="selenium-ui" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cogmento.testcases.cases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cogmento.testcases.cases" />
+      <option name="MAIN_CLASS_NAME" value="com.cogmento.testcases.cases.CreateDeal" />
+      <option name="METHOD_NAME" value="testcaseNoMandate" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.CreateDeal.testCaseEdit" />
+        <item itemvalue="TestNG.CreateDeal.testCaseDelete" />
+        <item itemvalue="TestNG.CreateDeal.testCaseCreate" />
+        <item itemvalue="TestNG.CreateDeal.testcaseNoMandate" />
+        <item itemvalue="TestNG.CreateDeal.testcaseMaxChar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d9c1d87-d991-45f8-a42e-b2d2ed9f06c7" name="Changes" comment="" />
+      <created>1716283699195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716283699195</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Functions are added - Create and Delete !!">
+      <option name="closed" value="true" />
+      <created>1716296534737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716296534737</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Functions are added - Create and Delete !!">
+      <option name="closed" value="true" />
+      <created>1716348724199</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716348724199</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716790597589</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716790597589</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716888804938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716888804938</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Functions are added - Create and Delete..&#10;Hashmap using excel">
+      <option name="closed" value="true" />
+      <created>1716949355025</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716949355025</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Framework setup" />
+    <MESSAGE value="Functions are added - Create and Delete !!" />
+    <MESSAGE value="Functions are added - Create and Delete..&#10;Hashmap using excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functions are added - Create and Delete..&#10;Hashmap using excel" />
+  </component>
+</project>
