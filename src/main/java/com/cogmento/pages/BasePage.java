@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
+import java.security.SecureRandom;
 import java.util.List;
 
 //this class should have only common web related option
@@ -30,6 +31,7 @@ public class BasePage {
     private static final By createButton = By.xpath("//button[@class='ui linkedin button']//i[@class='edit icon']/ancestor::button");
     private static final By addButton = By.xpath("//div[@aria-selected='true']/span[@class='text']/b");
     private static final By errMessages = By.xpath("//span[@class='inline-error-msg']");//Error Messages at fields
+    private static final By toastErrorMsg = By.xpath("//div[@class='content']//p");
     private static final By lengthErrorMsg = By.xpath("//div[@class='ui error floating icon message']"); //Error Messages for max input
     private static final By withoutUsersXpath = By.xpath("//div[text()='Access']/parent::div/span");
 
@@ -67,6 +69,17 @@ public class BasePage {
     }
     public String takePageScreenShot() {
         return this.scriptAction.takeScreenshotAndSave();
+    }
+
+    public  String generateRandomString(int length) {
+        String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        SecureRandom random = new SecureRandom();
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            int randomIndex = random.nextInt(CHARACTERS.length());
+            sb.append(CHARACTERS.charAt(randomIndex));
+        }
+        return sb.toString();
     }
 
     public void rubbishBin(String pageName, String valueName, String purpose, String popUpOperation) throws Exception {
@@ -274,6 +287,18 @@ public class BasePage {
             logger.info("Expected Error Message displayed : " + sExpectedErrorMessage);
         }catch (CustomException e){
             logger.error("Expected Error message is not matched");
+            throw new CustomException(e);
+        }
+    }
+
+    public void toastErrorMessage(String sExpectedErrorMessage) throws Exception {
+        try {
+            String sActualToastErrorMessage = scriptAction.getText(toastErrorMsg);
+            scriptAction.waitUntilElementIsVisible(toastErrorMsg, ApplicationConstants.MEDIUM_TIMEOUT); //wait until the error message is display
+            Assert.assertTrue(sExpectedErrorMessage.contains(sActualToastErrorMessage), "toast error message is not matched");
+            logger.info("Expected toast Error Message displayed : " + sExpectedErrorMessage);
+        }catch (CustomException e){
+            logger.error("Expected toast Error message is not matched");
             throw new CustomException(e);
         }
     }
