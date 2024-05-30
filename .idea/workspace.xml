@@ -49,26 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.CreateDeal.executor": "Run",
-    "TestNG.CreateDeal.testCaseCreate.executor": "Run",
-    "TestNG.CreateDeal.testCaseDelete.executor": "Run",
-    "TestNG.CreateDeal.testCaseEdit.executor": "Run",
-    "TestNG.CreateDeal.testCaseFlow1.executor": "Run",
-    "TestNG.CreateDeal.testCaseFlow2.executor": "Run",
-    "TestNG.CreateDeal.testCaseFlow4.executor": "Run",
-    "TestNG.CreateDeal.testcaseFlow3.executor": "Run",
-    "TestNG.CreateDeal.testcaseMaxChar.executor": "Run",
-    "TestNG.CreateDeal.testcaseNoMandate.executor": "Run",
-    "TestNG.DeleteDeal.executor": "Run",
-    "git-widget-placeholder": "Team__1__Sathvik",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Sathvik/Documents/GitHub/Team1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.CreateDeal.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseCreate.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseDelete.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseEdit.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseFlow1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseFlow2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testCaseFlow4.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testcaseFlow3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testcaseMaxChar.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.CreateDeal.testcaseNoMandate.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DeleteDeal.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Team__1__Sathvik&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sathvik/Documents/GitHub/Team1&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="TestNG.CreateDeal.testCaseCreate">
     <configuration name="CreateDeal.testCaseCreate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="selenium-ui" />
       <extension name="coverage">
